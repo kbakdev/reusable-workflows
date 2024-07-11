@@ -1,0 +1,20 @@
+name: Generate Outputs
+
+on:
+  workflow_call:
+    outputs:
+      output1:
+        description: 'First output'
+        value: ${{ steps.step1.outputs.test }}
+      output2:
+        description: 'Second output'
+        value: ${{ steps.step2.outputs.test }}
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - id: step1
+        run: echo "test=hello" >> "$GITHUB_OUTPUT"
+      - id: step2
+        run: echo "test=world" >> "$GITHUB_OUTPUT"
