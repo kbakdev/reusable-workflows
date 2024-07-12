@@ -12,4 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Input
-        run: echo "Using input: ${{ inputs.input }}"
+        run: |
+          echo "Using input: ${{ inputs.input }}"
