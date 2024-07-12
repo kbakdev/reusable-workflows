@@ -11,4 +11,5 @@ jobs:
   use:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Using input: ${{ inputs.input }}"
+      - name: Echo Input
+        run: echo "Using input: ${{ inputs.input }}"
