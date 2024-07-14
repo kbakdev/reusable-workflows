@@ -5,7 +5,7 @@ on:
     outputs:
       output:
         description: 'Generated output'
-        value: ${{ steps.generate.outputs.result }}
+        value: ${{ jobs.generate.steps.generate.outputs.result }}
 
 jobs:
   generate:
